@@ -6,33 +6,37 @@ tags:
 
 ## Tips
 
-play/F8 == disembody to see the pawn
-F8 again to possess again
+**BeginPlay**:
 
-create BluePrint from actor : right panel icon (3 squares)
+- play/F8 == disembody to see the pawn
+- F8 again to possess again
+- auto action by UE : on play a pawn is created from start location : in BP, `get pawn...`
 
-auto action :
-on play a pawn is created from start location : in BP, `get pawn...`
+**BluePrint**:
 
-BSP (Binary Space Partitioning): fast level prototyping :
+- create BluePrint from actor : right panel icon (3 squares)
 
-⚙️ How to Use BSP in Unreal Engine
-Open the Modes Panel (Shift + 1).
-Select BSP (Geometry) and choose a shape (Box, Cylinder, etc.).
-Drag the shape into the level.
-Modify its size and shape in the Details Panel.
-Convert to Static Mesh when the design is finalized (Right-click → Convert to Static Mesh).
-
-📌 Types of BSP Brushes
-Additive Brush: Creates solid geometry.
-Subtractive Brush: Cuts away from existing geometry.
-
-⚠️  Performance Considerations: BSP is not as optimized as static meshes and should generally be replaced with static meshes for the final level.
-
-BluePrint Canvas :
+**BluePrint Canvas**:
 
 - get pawn
 - get forward vector
 - spawn from (BP, ...)
-
 - select multiple and right clic to make a  function of a bloc
+
+**BSP (Binary Space Partitioning)**:
+
+- fast level prototyping
+- ⚙️  How to Use BSP in Unreal Engine:
+
+      Open the Modes Panel (Shift + 1).
+      Select BSP (Geometry) and choose a shape (Box, Cylinder, etc.).
+      Drag the shape into the level.
+      Modify its size and shape in the Details Panel.
+      Convert to Static Mesh when the design is finalized (Right-click → Convert to Static Mesh).
+
+- 📌 Types of BSP Brushes:
+
+      Additive Brush: Creates solid geometry.
+      Subtractive Brush: Cuts away from existing geometry.
+
+- ⚠️  Performance Considerations: BSP is not as optimized as static meshes and should generally be replaced with static meshes for the final level.
