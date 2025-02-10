@@ -4,7 +4,6 @@ tags:
 - unreal-engine
 --- 
 
-
 ## Tips
 
 play/F8 == disembody to see the pawn
@@ -35,3 +34,5 @@ BluePrint Canvas :
 - get pawn
 - get forward vector
 - spawn from (BP, ...)
+
+- select multiple and right clic to make a  function of a bloc
