@@ -4,7 +4,7 @@ tags:
 - unreal-engine
 ---
 
-## Tips
+# Tips
 
 **BeginPlay**:
 
@@ -22,6 +22,14 @@ tags:
 - get forward vector
 - spawn from (BP, ...)
 - select multiple and right clic to make a  function of a bloc
+
+**BluePrint Level**
+
+- select object (cube, etc..) from the main scene
+- clic open Level Blue Print
+- right clic "create a reference to the _object_"
+
+> make a reusable blueprint such a bullet, but/and instantiate it from the level blueprint
 
 **BSP (Binary Space Partitioning)**:
 
