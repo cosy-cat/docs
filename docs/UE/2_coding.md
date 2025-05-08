@@ -27,4 +27,5 @@ UE_LOG(LogTemp, Level, TEXT("message"));
 - reopen UE editor, now the C++ project folder with the cpp files will appear in the content drawer
 
 Now and next times :
+
 - in tools menu regenerate project files (avoid sqwiggles in vscode)
