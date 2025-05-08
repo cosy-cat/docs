@@ -29,3 +29,24 @@ UE_LOG(LogTemp, Level, TEXT("message"));
 Now and next times :
 
 - in tools menu regenerate project files (avoid sqwiggles in vscode)
+
+## CPP particularities
+
+### CONST Method
+
+```cpp
+bool Namespace::AMethod() const
+
+// ℹ️ this method cannot modify the state of the object, or it results in a compile error 
+// For instance, if using in the method:
+// SetActorLocation = ❌
+// GetActorLocation = ✅
+```
+
+## FRotator
+
+💡 tips for continuous rotation:
+
+```cpp
+AddActorLocalRotation(RotationVelocity * DeltaTime);
+```
