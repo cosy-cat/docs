@@ -36,7 +36,7 @@ tags:
 - fast level prototyping
 - ⚙️  How to Use BSP in Unreal Engine:
 
-      Open the Modes Panel (Shift + 1).
+      Open the Selection Mode Panel from the drop down under level name.
       Select BSP (Geometry) and choose a shape (Box, Cylinder, etc.).
       Drag the shape into the level.
       Modify its size and shape in the Details Panel.
@@ -48,3 +48,9 @@ tags:
       Subtractive Brush: Cuts away from existing geometry.
 
 - ⚠️  Performance Considerations: BSP is not as optimized as static meshes and should generally be replaced with static meshes for the final level.
+
+**GameModes**
+
+Change game mode (from TPs to FPs) by:
+- open content drawer, clic + add button, add feature/content pack, 1st or 3rd Person BP
+- open Project Settings, Project Maps and Modes, change default Pawn Class to desired BP
