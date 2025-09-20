@@ -4,7 +4,7 @@ tags:
 - unreal-engine
 ---
 
-## VsCode build 
+## VsCode build
 
 - run build task: ${Project}Editor Win64 Development Build
 
@@ -54,3 +54,58 @@ bool Namespace::AMethod() const
 ```cpp
 AddActorLocalRotation(RotationVelocity * DeltaTime);
 ```
+
+## git lfs
+
+```sh
+# Once only
+sudo apt-get install git-lfs
+git lfs install
+
+git lfs track "*.uasset"
+git lfs track "*.umap"
+git lfs track "*.png"
+git lfs track "*.jpg"
+git lfs track "*.tga"
+git lfs track "*.wav"
+git lfs track "*.mp3"
+git lfs track "*.fbx"
+
+```
+
+- add file at root of project `.gitattributes`:
+
+```txt
+# Unreal Engine binary assets
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap   filter=lfs diff=lfs merge=lfs -text
+
+# Common large binary types
+*.png    filter=lfs diff=lfs merge=lfs -text
+*.jpg    filter=lfs diff=lfs merge=lfs -text
+*.tga    filter=lfs diff=lfs merge=lfs -text
+*.wav    filter=lfs diff=lfs merge=lfs -text
+*.mp3    filter=lfs diff=lfs merge=lfs -text
+*.mov    filter=lfs diff=lfs merge=lfs -text
+*.mp4    filter=lfs diff=lfs merge=lfs -text
+*.fbx    filter=lfs diff=lfs merge=lfs -text
+
+# Optional (if using Megascans/Metahuman, add more formats like EXR, TIFF, etc.)
+```
+
+```sh
+# for each project
+git init
+git add .gitattributes
+git add .
+git commit -m "Initial Unreal project with Git LFS"
+```
+
+- check:
+
+```sh
+git lfs ls-files
+```
+
+> You should see .uasset, .umap, and other large binaries listed.
+
